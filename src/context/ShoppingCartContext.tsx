@@ -24,6 +24,11 @@ export function useShoppingCart() {
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [cartItems, setCartItems] = useState<CardItem[]>([]);
+  
+  function getItemQuantity(id: number) {}
+  function increaseCartQuantity(id: number){}
+  function decreaseCartQuantity(id: number){}
+  function removeFromCart(id: number){}
 
   return (
     <ShoppingCartContext.Provider value={{
