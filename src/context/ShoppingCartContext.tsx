@@ -4,7 +4,7 @@ type ShoppingCartProviderProps = {
   children: ReactNode;
 };
 
-type CardItem = {
+type CartItem = {
   id: number;
   quantity: number;
 };
@@ -23,7 +23,7 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
-  const [cartItems, setCartItems] = useState<CardItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
